@@ -28,7 +28,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
   CREATE TABLE SpotifyClone.plano(
     plano_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_plano VARCHAR(250) NOT NULL,
-    valor_plano DECIMAL (5,2) NOT NULL
+    valor_plano DECIMAL (3,2)
 ) engine = InnoDB;
 
   CREATE TABLE SpotifyClone.usuario(
@@ -92,10 +92,10 @@ DROP DATABASE IF EXISTS SpotifyClone;
 
     INSERT INTO SpotifyClone.plano (nome_plano, valor_plano)
   VALUES
-    ('gratuito', 0,00),
-    ('familiar', 7,99),
-    ('universitário', 5,99),
-    ('pessoal', 6,99);
+    ('gratuito', 0.00),
+    ('familiar', 7.99),
+    ('universitário', 5.99),
+    ('pessoal', 6.99);
 
     INSERT INTO SpotifyClone.usuario (nome_usuario, idade, data_assinatura, plano_id)
   VALUES
@@ -131,17 +131,17 @@ DROP DATABASE IF EXISTS SpotifyClone;
 
     INSERT INTO SpotifyClone.seguindo (usuario_id, artista_id)
   VALUES
-    ( 1, 1),
-    ( 1, 2),
-    ( 1, 3),
-    ( 2, 1),
-    ( 2, 3),
-    ( 3, 2),
-    ( 4, 4),
-    ( 5, 5),
-    ( 5, 6),
-    ( 6, 6),
-    ( 6, 1),
-    ( 7, 6),
-    ( 9, 3),
-    ( 10, 2);
+    (1, 1),
+    (1, 2),
+    (1, 3),
+    (2, 1),
+    (2, 3),
+    (3, 2),
+    (4, 4),
+    (5, 5),
+    (5, 6),
+    (6, 6),
+    (6, 1),
+    (7, 6),
+    (9, 3),
+    (10, 2);
